@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>跨标签页共享计数器</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: grid; place-items: center; min-height: 100vh; margin: 0; background: #f5f6f8; color: #222; }
+    main { text-align: center; background: #fff; padding: 2.5rem 3rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    #count { font-size: 5rem; font-variant-numeric: tabular-nums; margin: 1rem 0; }
+    .row { display: flex; gap: .75rem; justify-content: center; }
+    button { font-size: 1.25rem; padding: .5rem 1.5rem; border: 1px solid #ccc; border-radius: 8px; background: #fff; cursor: pointer; }
+    button:hover { background: #f0f0f0; }
+    #reset { color: #b00020; }
+    .meta { color: #777; font-size: .85rem; margin-top: 1.5rem; }
+    code { background: #eee; padding: .1rem .35rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>共享计数器</h1>
+    <div id="count">…</div>
+    <div class="row">
+      <button id="dec" type="button">−1</button>
+      <button id="inc" type="button">+1</button>
+      <button id="reset" type="button">重置</button>
+    </div>
+    <p class="meta">标签页 ID：<code id="tab"></code></p>
+    <p class="meta">多开几个标签页同时操作试试；刷新任意标签页，计数保持一致。</p>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

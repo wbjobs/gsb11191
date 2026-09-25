@@ -1,0 +1,9 @@
+{
+  "name": "shared-counter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/counter.test.mjs",
+    "start": "python3 -m http.server 8000"
+  }
+}
