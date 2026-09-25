@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>跨标签页共享计数器</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">BroadcastChannel + IndexedDB</p>
+      <h1>共享计数器</h1>
+      <output class="counter" data-counter-value aria-live="polite">…</output>
+      <div class="actions">
+        <button type="button" data-action="decrement" aria-label="减一">−1</button>
+        <button type="button" data-action="reset">重置</button>
+        <button type="button" data-action="increment" aria-label="加一">+1</button>
+      </div>
+      <p class="status" data-status>正在连接…</p>
+    </main>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
